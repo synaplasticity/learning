@@ -1,0 +1,3 @@
+COURSERA_EMAIL=dsouza.vinod@gmail.com
+COURSERA_PASS=BWmzYf4zMx
+python submit_python_lab.py
