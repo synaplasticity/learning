@@ -1,7 +1,7 @@
-# version code 761
+    # version code 761
 # Please fill out this stencil and submit using the provided submission script.
 
-from vec import Vec
+from vector.vec import Vec
 
 
 
@@ -16,7 +16,18 @@ def vec_select(veclist, k):
     >>> vec_select([v1, v2, v3, v4], 'a') == [Vec(D,{'b': 1}), Vec(D,{'b': 2})]
     True
     '''
-    pass
+
+    # Iterate veclist
+    # check is 'k' does not exists (value is 0 or vector[k] does not exist) in a vector
+    # if it does not , create a vector sans the 'k' element
+
+    __return_list = list()
+    for vector in veclist:
+        if vector[k] == 0:
+            del vector[k] 
+            __return_list.append(vector)
+
+    return __return_list
 
 def vec_sum(veclist, D): 
     '''

@@ -1,3 +1,9 @@
+"""
+Returns 0 is the key found else, returns the vector
+"""
+def remove_item(v, d):
+    return v.f.pop(d, v)
+
 def getitem(v,d):
     "Returns the value of entry d in v"
     assert d in v.D
@@ -94,6 +100,7 @@ class Vec:
         self.D = labels
         self.f = function
 
+    __delitem__ = remove_item
     __getitem__ = getitem
     __setitem__ = setitem
     __neg__ = neg
