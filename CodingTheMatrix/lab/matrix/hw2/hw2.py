@@ -2,6 +2,7 @@
 # Please fill out this stencil and submit using the provided submission script.
 
 from vector.vec import Vec
+# from vec import Vec
 
 
 
@@ -39,7 +40,18 @@ def vec_sum(veclist, D):
     >>> vec_sum([v1, v2, v3, v4], D) == Vec(D, {'b': 13, 'a': 11})
     True
     '''
-    pass
+    
+    # __result_vector = Vec(D, {})
+    # if len(veclist) == 0: 
+    #     return __result_vector
+
+    # for vector in veclist:
+        # __result_vector = __result_vector + vector
+
+    return sum(veclist, Vec(D, {}))
+
+    # return __result_vector
+
 
 def vec_select_sum(veclist, k, D): 
     '''
