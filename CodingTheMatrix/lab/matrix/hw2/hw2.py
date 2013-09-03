@@ -74,7 +74,8 @@ def scale_vecs(vecdict):
     >>> scale_vecs({3: v1, 5: v2}) == [Vec({1,2,3},{2: 3.0}), Vec({1,2,4},{1: 0.2, 2: 0.4, 4: 1.6})]
     True
     '''
-    pass
+    
+    return [1/scale * vecdict[scale] for scale  in vecdict.keys()]
 
 
 

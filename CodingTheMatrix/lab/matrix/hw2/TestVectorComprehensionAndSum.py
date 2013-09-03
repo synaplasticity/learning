@@ -1,7 +1,7 @@
 import sys
 sys.path.append('E:\\personal\\programming\\learning\\CodingTheMatrix\\lab\\matrix')
 
-from hw2 import vec_select, vec_sum, vec_select_sum
+from hw2 import vec_select, vec_sum, vec_select_sum, scale_vecs
 import hw0
 import unittest
 from vector.vec import Vec
@@ -69,6 +69,13 @@ class TestVectorComprehensionAndSum(unittest.TestCase):
     	veclist = [v1, v2, v3, v4]
 
     	self.assertTrue(vec_select_sum(veclist, 'a', __domain) == Vec(__domain, {'b': 3}))
+
+    def test_scale_vector(self):
+    	v1 = Vec({1,2,3}, {2: 9})
+    	v2 = Vec({1,2,4}, {1: 1, 2: 2, 4: 8})
+
+    	self.assertTrue(scale_vecs({3: v1, 5: v2}) == [Vec({1,2,3},{2: 3.0}), Vec({1,2,4},{1: 0.2, 2: 0.4, 4: 1.6})])
+
 
 if __name__ == '__main__':
 	unittest.main()
